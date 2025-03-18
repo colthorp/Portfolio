@@ -1,0 +1,307 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    
+body {
+    flex-wrap: wrap;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #333; 
+    color: #333;
+}
+
+header {
+    background: #333;
+    padding: 10px 0;
+}
+
+/* Navbar */
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    
+}
+
+header nav ul li {
+    display: inline;
+    margin-top: 20px;
+}
+
+header nav ul li a {
+    color: #efefef;
+    text-decoration: None; 
+    font-size: 20px;
+    text-transform: uppercase; 
+    padding: 5px 10px;
+}
+
+header nav ul li a:hover {
+    background-color: #adacac;
+    border-radius: 3px;
+}
+
+
+/* Sections*/
+
+.section {
+    padding: 60px 20px;
+    margin: 20px 0;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 5px;
+    text-align: center;
+    color: #333;
+}
+
+h2 {
+    font-size: 2.0rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333; 
+}
+
+p {
+    text-align: center;
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+/*  About */
+
+#about {
+    background-color: #efefef;
+}
+
+/* Photo Carousel*/
+
+.carousel {
+    position: relative;
+    height: 700px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.carousel__track-container {
+    height: 100%;
+    position: relative;
+    overflow: hidden
+}
+
+.carousel_image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.carousel__track {
+    height: 100%;
+    position: relative;  
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    transition:  transform 250ms ease-in;
+}
+
+.carousel__slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.carousel__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.carousel__button img {
+    width: 45px;
+}
+
+.carousel__button--left {
+    left: -50px;
+}
+
+.carousel__button--right {
+    right: -50px;
+}
+
+.carousel__nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.carousel__indicator {
+    border: 0;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    margin: 0 6px;
+    background: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+.carousel__indicator.current-slide {
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.is-hidden {display: none;}
+
+
+/* Project */
+
+#projects {
+    background-color: #f9f9f9;
+}
+.project-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.project-item {
+    width: 250px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+    transform:translate(10px)
+}
+
+.project-item img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.project-item h3 {
+    font-size: 1.25rem;
+    margin-top: 15px;
+}
+
+
+/* About Me & Photos*/
+
+#about {
+    background-color: #efefef;
+}
+#aboutMeBlurb {
+    background-color: efefef;
+    margin-top: 10px;
+}
+
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+   
+.photo {
+    flex:1;
+    flex-wrap: wrap;
+    max-width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    padding-bottom: 45px;
+    text-align: center;   
+   }
+
+   @media screen and (max-width: 850px) {
+    .photo {
+    padding: 8px;
+    padding-bottom: 11px;
+    }
+   }
+
+.photo-gallery img {
+    object-fit: cover;
+    aspect-ratio: 0.7;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+
+/* Contact*/
+
+#contact {
+    background-color: #f9f9f9;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    gap: 15px;
+}
+
+form label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+form input, 
+form textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+form button {
+    padding: 12px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #adacac;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #efefef;
+    text-align: center;
+    justify-content: center;
+    padding: 10px 0;
+    margin-top: 20px, 0px;
+}
+
+/* Back to Top Button */
+#topButton {
+    cursor: pointer;
+
+}

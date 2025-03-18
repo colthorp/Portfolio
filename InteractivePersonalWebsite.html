@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renée Colthorp</title>
+    <link rel="stylesheet" href="InteractivePersonalWebsite.css">
+</head>
+<body>
+
+    <!-- NavBar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About</a></li>   
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Main Title-->
+    <section id="about" class="section">
+        <h1>Renée  Colthorp</h1>
+        <p>Hey! I'm Renée, currently enrolled in a Software Development Bootcamp. 
+            <br> As we learn, I'll be sure to update what projects we are working on below 
+        </p>
+
+    <!--Profile Picture Slideshow-->
+        <div class="carousel">    
+            <button class="carousel__button carousel__button--left is-hidden">
+                <img src="Pictures/Left-Arrow.svg" alt="Left Arrow">
+            </button>
+            <div class="carousel__track-container">
+                <ul class="carousel__track">
+                    <li class="carousel__slide current-slide">
+                        <img class="carousel_image" src="Pictures/Profile1.JPG" alt="Horse">
+                    </li>
+                    <li class="carousel__slide current-slide">
+                        <img class="carousel_image" src="Pictures/Profile2.JPG" alt="Stanley Cup">
+                    </li>
+                    <li class="carousel__slide current-slide">    
+                        <img class="carousel_image" src="Pictures/Profile3.jpg" alt="Takla">
+                    </li>
+                </ul>        
+            </div>
+            <button class="carousel__button carousel__button--right">
+                <img src="Pictures/Right-Arrow.svg" alt="Right Arrow">
+            </button>
+
+            <div class="carousel__nav">
+                <button class="carousel__indicator current-slide"></button>
+                <button class="carousel__indicator"></button>
+                <button class="carousel__indicator"></button>
+            </div>
+        </div>         
+
+    </section>
+
+    <!--Projects-->
+    <section id="projects" class="section">
+        <h2>My Projects</h2>
+        <div class="project-gallery">
+            <div class="project-item">
+                <img src="Pictures/Note App .png" alt="Note App">
+                <h3>Note Taking App</h3>
+                <p>This was our Midterm assignment</p>
+                <a href="https://github.com/colthorp/Note-Taking-App" target="_blank" class="project1-link">Take a Look</a>
+            </div>
+            <div class="project-item">
+                <img src="Pictures/Project2.jpeg" alt="Project 2">
+                <h3>Project 2</h3>
+                <p>As I continue to work on more projects, I will add them here!</p>
+            </div>
+            <div class="project-item">
+                <img src="Pictures/Project3.jpeg" alt="Project 3">
+                <h3>Project 3</h3>
+                <p>And also here!</p>
+            </div>
+        </div>
+    </section>
+
+
+<!--About-->
+<section id="about" class="section">
+     <h2>About Me</h2>
+        <div class="photo-gallery">
+          <div class="photo">
+            <img src="Pictures/Fishing.JPG" alt="Fishing">
+         </div>
+          <div class="photo">
+            <img src="Pictures/Sibs.jpeg" alt="Siblings">
+         </div>
+         <div class="photo">
+            <img src="Pictures/Surfing.jpg" alt="Surfing">
+         </div>
+         <div class="photo">
+            <img src="Pictures/Joey.JPG" alt="Joeypig">
+         </div>
+        </div>
+        <div id="aboutMeBlurb">
+            <p> When I'm not sitting infront of my computer, you can find me doing anything outdoors; out on the lake fishing or surfing, traveling, at the cabin, or hanging out with my friends & family. 
+                <br> Oh and I have a pet pig named Joey!<br>
+            </p>
+</section>
+
+
+    <!--Contact-->
+<section id="contact" class="section">
+        <h2>Contact Me</h2>
+        <form action="submit_form.php" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    <div id="form-message"></div>
+
+</section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; Renée Colthorp</p>
+        <button id="topButton"
+        onclick="toTop()">Back to Top</button>
+        
+    </footer>
+    <script src="InteractivePersonalWebsite.js"></script>
+
+    
+</body>
+</html>
